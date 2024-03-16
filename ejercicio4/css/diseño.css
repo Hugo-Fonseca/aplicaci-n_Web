@@ -1,0 +1,62 @@
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, #020024 0%, #c26413 28%, #020024 110%);
+    font-family: "Rubik Iso", system-ui;   
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+
+main{
+    border: 1px solid #000000;
+    margin: 10px auto;
+    display: flex;
+}
+
+.section1{
+    background-color: rgb(255, 255, 255, 0.2);
+    padding: 0 10px 10px 10px;
+    border-radius: 8px;
+}
+
+button{
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    color: #000000;
+    font-weight: bold;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+table td{
+    border: 5px solid #5fc56d;
+}
+.contenier{
+    text-align: center;
+}
+
+.section2{
+    background-color: rgb(255, 255, 255, 0.2);
+    padding: 0 10px 10px 10px;
+    border-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.estadistica{
+    border: 1px solid #ffffff;
+}
+
+.regresar{
+    text-align: center;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+
+}

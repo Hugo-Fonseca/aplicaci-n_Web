@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/diseño.css">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <main>
+        <section class="section1">
+            <h1>JUEGO DE MEMORIA</h1>
+            <div class="conteiner">
+                <table>
+                    <td><button id="0" onclick="mostrar(0)"></button></td>
+                    <td><button id="1" onclick="mostrar(1)"></button></td>
+                    <td><button id="2" onclick="mostrar(2)"></button></td>
+                    <td><button id="3" onclick="mostrar(3)"></button></td>
+                    <td><button id="4" onclick="mostrar(4)"></button></td>
+                </table>
+                <table>
+                    <td><button id="5" onclick="mostrar(5)"></button></td>
+                    <td><button id="6" onclick="mostrar(6)"></button></td>
+                    <td><button id="7" onclick="mostrar(7)"></button></td>
+                    <td><button id="8" onclick="mostrar(8)"></button></td>
+                    <td><button id="9" onclick="mostrar(9)"></button></td>
+                </table>
+                <table>
+                    <td><button id="10" onclick="mostrar(10)"></button></td>
+                    <td><button id="11" onclick="mostrar(11)"></button></td>
+                    <td><button id="12" onclick="mostrar(12)"></button></td>
+                    <td><button id="13" onclick="mostrar(13)"></button></td>
+                    <td><button id="14" onclick="mostrar(14)"></button></td>
+                </table>
+                <table>
+                    <td><button id="15" onclick="mostrar(15)"></button></td>
+                    <td><button id="16" onclick="mostrar(16)"></button></td>
+                    <td><button id="17" onclick="mostrar(17)"></button></td>
+                    <td><button id="18" onclick="mostrar(18)"></button></td>
+                    <td><button id="19" onclick="mostrar(19)"></button></td>
+                </table>
+            </div>
+        </section>
+        <section class="section2">
+            <h2 id="numAciertos" class="estadistica">Aciertos: 0</h2>
+            <h2 id="t-restante" class="estadistica">Tiempo: 30 seg</h2>
+            <h2 id="numMov" class="estadistica">Movimientos: 0</h2>
+        </section>
+
+    </main>
+    <button id="retornar" class="regresar">Ir a pagina Principal</button>
+    <script src="js/segundaPag.js"></script>
+</body>
+</html>
