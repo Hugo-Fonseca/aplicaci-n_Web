@@ -48,13 +48,13 @@ table td{
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     padding: 0 20px;
-    height: 210px;
+    height: 300px;
     width: 310px;
 }
 
 .estadistica{
     border: 1px solid #ffffff;
-    height: 35px;
+    height: 65px;
     padding: 3px 10px;
 }
 

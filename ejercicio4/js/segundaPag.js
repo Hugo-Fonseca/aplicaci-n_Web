@@ -5,16 +5,45 @@ let primerResultado = null;
 let segundoResultado = null;
 let movimientos = 0;
 let aciertos = 0;
+let temporizador = false;
+let timer = 40;
+let timerIn = 40;
+let tiempoReg = null;
 
 let mostrarMov = document.getElementById('numMov');
 let mostrarAci = document.getElementById('numAciertos');
-
+let mostrarTiem = document.getElementById('t-restante')
 //numeros aleatorios
 let numeros = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10];
 numeros = numeros.sort(()=>{return Math.random()-0.5});
 console.log(numeros);
 
+function contarTiempo(){
+  tiempoReg = setInterval(()=>{
+    timer--;
+    mostrarTiem.innerHTML = `Tiempo: ${timer} seg`;
+    if (timer == 0){
+      clearInterval(tiempoReg);
+      bloqMuestra();
+    }
+  },1000)
+}
+
+function bloqMuestra(){
+  for (let i = 0; i <= 19; i++){
+    let muestraBloq = document.getElementById(i);
+    muestraBloq.innerHTML = numeros[i];
+    muestraBloq.disabled = true;
+  }
+}
+
 function mostrar(id){
+
+  if (temporizador == false){
+    contarTiempo();
+    temporizador = true;
+  }
+
   numeroDestapados++;
   console.log(numeroDestapados);
 
@@ -42,7 +71,9 @@ function mostrar(id){
       mostrarAci.innerHTML = `Aciertos: ${aciertos}`;
 
       if(aciertos == 10){
+        clearInterval(tiempoReg);
         mostrarAci.innerHTML = `Aciertos: ${aciertos}🎉🥳`;
+        mostrarTiem.innerHTML = `Genial: 🥳Lo lograste en ${timerIn - timer} segundos`;
         mostrarMov.innerHTML = `Movimientos: ${movimientos}🤘🏻🙀`
       }
 
@@ -54,7 +85,7 @@ function mostrar(id){
         muestra1.disabled = false;
         muestra2.disabled = false;
         numeroDestapados = 0;
-      },200);
+      },700);
     }
   }
 }
