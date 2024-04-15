@@ -63,5 +63,7 @@ table td{
     font-size: 20px;
     width: auto;
     height: auto;
-
+}
+img{
+    width: 80%;
 }

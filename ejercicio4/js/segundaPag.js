@@ -32,7 +32,7 @@ function contarTiempo(){
 function bloqMuestra(){
   for (let i = 0; i <= 19; i++){
     let muestraBloq = document.getElementById(i);
-    muestraBloq.innerHTML = numeros[i];
+    muestraBloq.innerHTML =  `<img src="./img/${numeros[i]}.png" alt="">`;
     muestraBloq.disabled = true;
   }
 }
@@ -51,14 +51,14 @@ function mostrar(id){
     //mostrar primer numero
     muestra1 = document.getElementById(id);
     primerResultado = numeros[id];
-    muestra1.innerHTML = primerResultado;
+    muestra1.innerHTML = `<img src="./img/${primerResultado}.png" alt="">`;
 
     //desactivar primer boton
     muestra1.disabled = true; 
   }else if(numeroDestapados == 2){
     muestra2 = document.getElementById(id);
     segundoResultado = numeros[id];
-    muestra2.innerHTML = segundoResultado;
+    muestra2.innerHTML =  `<img src="./img/${segundoResultado}.png" alt="">`;
     muestra2.disabled = true;
 
     movimientos++;
