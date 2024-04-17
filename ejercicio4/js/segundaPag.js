@@ -13,7 +13,7 @@ let tiempoReg = null;
 let mostrarMov = document.getElementById('numMov');
 let mostrarAci = document.getElementById('numAciertos');
 let mostrarTiem = document.getElementById('t-restante')
-//numeros aleatorios
+
 let numeros = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10];
 numeros = numeros.sort(()=>{return Math.random()-0.5});
 console.log(numeros);
@@ -48,13 +48,12 @@ function mostrar(id){
   console.log(numeroDestapados);
 
   if (numeroDestapados == 1){
-    //mostrar primer numero
+  
     muestra1 = document.getElementById(id);
     primerResultado = numeros[id];
     muestra1.innerHTML = `<img src="./img/${primerResultado}.png" alt="">`;
-
-    //desactivar primer boton
     muestra1.disabled = true; 
+
   }else if(numeroDestapados == 2){
     muestra2 = document.getElementById(id);
     segundoResultado = numeros[id];
@@ -78,7 +77,6 @@ function mostrar(id){
       }
 
     }else{
-      //tapar valores
       setTimeout(()=>{
         muestra1.innerHTML = ' ';
         muestra2.innerHTML = ' ';

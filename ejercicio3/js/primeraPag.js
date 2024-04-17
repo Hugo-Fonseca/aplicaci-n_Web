@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addButton = document.getElementById('add-btn');
     const cancelButton = document.getElementById('cancel-btn');
     const employeeList = document.getElementById('employee-list');
-    const saveButton = document.getElementById('save-btn'); // Agregamos la referencia al botón de guardar
+    const saveButton = document.getElementById('save-btn');
   
     let editIndex = -1;
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     function addEmployee(name, position, salary) {
         const row = document.createElement('tr');
-        const id = generateUniqueId(); // Generar un identificador único para la fila
+        const id = generateUniqueId(); 
         row.dataset.id = id;
         row.innerHTML = `
             <td>${name}</td>
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         editButtons.forEach((button) => {
             button.addEventListener('click', function () {
                 const rowIndex = button.parentNode.parentNode.rowIndex;
-                editIndex = rowIndex - 1; // Ajustar el índice de edición
+                editIndex = rowIndex - 1; 
                 nameInput.value = employeeList.rows[editIndex].cells[0].innerText;
                 positionInput.value = employeeList.rows[editIndex].cells[1].innerText;
                 salaryInput.value = parseFloat(employeeList.rows[editIndex].cells[2].innerText);
@@ -96,8 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-    
-    // Función para generar un identificador único
+   
     function generateUniqueId() {
         return '_' + Math.random().toString(36).substr(2, 9);
     }
@@ -159,10 +158,10 @@ saveButton.addEventListener('click', function (event) {
     }
 
     editEmployee(editIndex, name, position, salary);
-    nameInput.value = ''; // Limpiar los campos de entrada
+    nameInput.value = ''; 
     positionInput.value = '';
     salaryInput.value = '';
-    resetForm(); // Restablecer el formulario y el índice de edición
+    resetForm();
 });
   
     cancelButton.addEventListener('click', function (event) {
